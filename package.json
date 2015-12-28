@@ -1,6 +1,6 @@
 {
   "name": "meshblu-core-task-revoke-token-by-query",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "directories": {

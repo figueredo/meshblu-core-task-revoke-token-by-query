@@ -18,8 +18,8 @@ class RevokeTokenByQuery
     {uuid} = request.metadata.auth
     return @_doCallback request, 422, callback unless uuid?
 
-    @tokenManager.revokeTokenByQuery uuid, request.data, (error, verified) =>
+    @tokenManager.revokeTokenByQuery uuid, request.data, (error) =>
       return callback error if error?
-      return @_doCallback request, (if verified then 204 else 422), callback
+      return @_doCallback request, 204, callback
 
 module.exports = RevokeTokenByQuery
