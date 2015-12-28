@@ -1,6 +1,6 @@
 {
   "name": "meshblu-core-task-revoke-token-by-query",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "",
   "main": "index.js",
   "directories": {
@@ -40,6 +40,6 @@
     "uuid": "^2.0.1"
   },
   "dependencies": {
-    "meshblu-core-manager-token": "^2.1.1"
+    "meshblu-core-manager-token": "^2.2.0"
   }
 }
