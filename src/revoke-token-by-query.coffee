@@ -3,8 +3,8 @@ http = require 'http'
 
 class RevokeTokenByQuery
   constructor: (options={}) ->
-    {@datastore,@cache,pepper,uuidAliasResolver} = options
-    @tokenManager = new TokenManager {@datastore, @cache, pepper, uuidAliasResolver}
+    {@datastore,cache,pepper,uuidAliasResolver} = options
+    @tokenManager = new TokenManager {@datastore, cache, pepper, uuidAliasResolver}
 
   _doCallback: (request, code, callback) =>
     response =
