@@ -46,8 +46,8 @@ describe 'RevokeTokenByQuery', ->
             auth:
               uuid: 'thank-you-for-considering'
               token: 'the-environment'
-          data:
-            tag: 'hello'
+          rawData:
+            '{"tag":"hello"}'
 
         @sut.do request, (error, @response) => done error
 
