@@ -22,7 +22,7 @@ class RevokeTokenByQuery
       data = JSON.parse request.rawData
     catch error
       return callback error if error?
-    @tokenManager.revokeTokenByQuery uuid, data, (error) =>
+    @tokenManager.revokeTokenByQuery {uuid, data}, (error) =>
       return callback error if error?
       return @_doCallback request, 204, callback
 

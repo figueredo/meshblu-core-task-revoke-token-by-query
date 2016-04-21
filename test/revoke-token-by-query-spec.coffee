@@ -10,11 +10,12 @@ describe 'RevokeTokenByQuery', ->
     @redisKey = uuid.v1()
     @cache = redis.createClient @redisKey
 
+    database = mongojs 'meshblu-core-task-check-token', ['devices']
     @datastore = new Datastore
-      database: mongojs 'meshblu-core-task-check-token'
+      database: database
       collection: 'devices'
 
-    @datastore.remove done
+    database.devices.remove done
 
   beforeEach ->
     @sut = new RevokeTokenByQuery
