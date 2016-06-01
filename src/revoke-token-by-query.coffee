@@ -15,14 +15,9 @@ class RevokeTokenByQuery
     callback null, response
 
   do: (request, callback) =>
-    {uuid} = request.metadata.auth
-    return @_doCallback request, 422, callback unless uuid?
-
-    try
-      data = JSON.parse request.rawData
-    catch error
-      return callback error if error?
-    @tokenManager.revokeTokenByQuery {uuid, data}, (error) =>
+    {toUuid} = request.metadata
+    data = JSON.parse request.rawData
+    @tokenManager.revokeTokenByQuery {uuid: toUuid, data}, (error) =>
       return callback error if error?
       return @_doCallback request, 204, callback
 

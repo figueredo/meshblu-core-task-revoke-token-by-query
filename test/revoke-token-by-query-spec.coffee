@@ -44,8 +44,9 @@ describe 'RevokeTokenByQuery', ->
         request =
           metadata:
             responseId: 'used-as-biofuel'
+            toUuid: 'thank-you-for-considering'
             auth:
-              uuid: 'thank-you-for-considering'
+              uuid: 'should-not-use-this-uuid'
               token: 'the-environment'
           rawData:
             '{"tag":"hello"}'
