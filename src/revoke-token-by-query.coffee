@@ -2,9 +2,8 @@ TokenManager = require 'meshblu-core-manager-token'
 http = require 'http'
 
 class RevokeTokenByQuery
-  constructor: (options={}) ->
-    {@datastore,cache,pepper,uuidAliasResolver} = options
-    @tokenManager = new TokenManager {@datastore, cache, pepper, uuidAliasResolver}
+  constructor: ({datastore,pepper,uuidAliasResolver}) ->
+    @tokenManager = new TokenManager {datastore, pepper, uuidAliasResolver}
 
   _doCallback: (request, code, callback) =>
     response =
