@@ -1,6 +1,6 @@
 {
   "name": "meshblu-core-task-revoke-token-by-query",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "",
   "main": "index.js",
   "directories": {
@@ -38,6 +38,6 @@
     "sinon-chai": "^2.8.0"
   },
   "dependencies": {
-    "meshblu-core-manager-token": "^7.0.0"
+    "meshblu-core-manager-token": "^7.2.0"
   }
 }
